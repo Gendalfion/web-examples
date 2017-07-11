@@ -1,0 +1,14 @@
+/* CSS-file is separated by the rules between {} */
+h1, p {
+  color:DarkSlateGray;
+}
+
+/* We specify rules by HTML tag names */
+p {
+  font-size:20px;
+}
+
+/* We can select all HTML tags by * wildcard */
+* {
+  font-family:Georgia;
+}

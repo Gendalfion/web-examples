@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unix Command Line</title>
+</head>
+<body>
+<h2>Command line summary:</h2>
+
+<h3>From the command line, you can navigate through files and folders on your computer:</h3>
+<ul>
+  <li><b>pwd</b> outputs the name of the current working directory.</li>
+  <li><b>ls</b> lists all files and directories in the working directory.</li>
+  <li><b>cd</b> switches you into the directory you specify.</li>
+  <li><b>mkdir</b> creates a new directory in the working directory.</li>
+  <li><b>touch</b> creates a new file inside the working directory.</li>
+</ul>
+
+<h3>Options modify the behavior of &lt;ls&gt; commands:</h3>
+<ul>
+  <li><b>ls -a</b> lists all contents of a directory, including hidden files and directories</li>
+  <li><b>ls -l</b> lists all contents in long format</li>
+  <li><b>ls -t</b> orders files and directories by the time they were last modified</li>
+  <li>Multiple options can be used together, like <b>ls -alt</b></li>
+</ul>
+
+<h3>From the command line, you can also copy, move, and remove files and directories:</h3>
+<ul>
+  <li><b>cp</b> copies files</li>
+  <li><b>mv</b> moves and renames files</li>
+  <li><b>rm</b> removes files</li>
+  <li><b>rm -r</b> removes directories</li>
+</ul>
+
+<h3>Wildcards are useful for selecting groups of files and directories</h3>
+
+<h3>The common redirection commands are:</h3>
+
+<ul>
+  <li>&gt; redirects standard output of a command to a file, overwriting previous content.</li>
+  <li>&gt;&gt; redirects standard output of a command to a file, appending new content to old content.</li>
+  <li>&lt; redirects standard input to a command.</li>
+  <li>| redirects standard output of a command to another command.</li>
+</ul>
+
+<h3>A number of other commands are powerful when combined with redirection commands:</h3>
+<ul>
+  <li><b>sort</b>: sorts lines of text alphabetically.</li>
+  <li><b>uniq</b>: filters duplicate, adjacent lines of text.</li>
+  <li><b>grep</b>: searches for a text pattern and outputs it.</li>
+  <li><b>sed</b> : searches for a text pattern, modifies it, and outputs it.</li>
+</ul>
+
+<h4><a href="https://www.nano-editor.org/" target="_blank">Nano text editor</a> is a simple command line text editor
+  invoked by <b>&lt;nano&gt;</b> command.</h4>
+
+<h4><b>"~/.bash_profile"</b> is where environment settings are stored. You can edit this file with nano.</h4>
+
+<h3>environment variables are variables that can be used across commands and programs and hold information about the
+  environment:</h3>
+
+<ul>
+  <li>export VARIABLE="Value" sets and exports an environment variable.</li>
+  <li>USER is the name of the current user.</li>
+  <li>PS1 is the command prompt.</li>
+  <li>HOME is the home directory. It is usually not customized.</li>
+  <li>PATH returns a colon separated list of file paths. It is customized in advanced cases.</li>
+  <li>env returns a list of environment variables.</li>
+</ul>
+</body>
+</html>

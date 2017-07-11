@@ -1,0 +1,233 @@
+/*
+    Some images are part of the content of a web page (icons, logos, album photos, etc.) and
+    they communicate important information to a user. Other images are intended simply to
+    style a web page (header backgrounds, etc.), not to communicate important information.
+
+    When an image communicates important information, you can use the <img> element and style
+    the image using CSS, if needed.
+
+    When an image is intended to style a web page, you can use the background property and
+    further style it with CSS.
+*/
+* {
+  border: 1px solid #AAA;
+}
+
+body {
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+}
+
+#cover {
+  height: 900px;
+  position: relative;
+  top: -55px;
+  width: 100%;
+
+/*
+    Images can also be added to the backgrounds of HTML elements with the 'background-image' property.
+    The background-image can be set to a value of url().
+    This technique can be used on nearly any HTML element:
+*/
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-8/htmlcss1-img_bicycles.jpeg");
+
+/*
+    You can control how a background image repeats with the background-repeat property.
+    This property can take one of four values:
+        repeat - the default value — the image will repeat horizontally and vertically.
+        repeat-x - the background image will be repeated only along the x-axis (horizontally).
+        repeat-y - the background image will be repeated only along the y-axis (vertically).
+        no-repeat - the background image will not be repeated at all and will appear only once.
+*/
+  background-repeat: no-repeat;
+
+/*
+    When a background image is not repeated, its position can be modified with the
+    'background-position' property.
+    A background image is positioned using a 3 by 3 grid (three rows, three columns),
+    meaning there are 9 total possible positions for the image:
+        left top - top left corner of the element's box.
+        center top - top center of the element's box.
+        right top - top right corner of the element's box.
+        left center - left column, center row.
+        center center - the center of the element's box.
+        right center - right column, center row.
+        left bottom - bottom left corner of the element's box.
+        center bottom - bottom center of the element's box.
+        right bottom - bottom right corner of the element's box.
+*/
+  background-position: center bottom;
+
+/*
+    CSS allows you to set all three properties at once using a shorthand property: 'background'.
+    Note that the background property includes all of the properties: background image, repetition,
+    and position (in that order):
+*/
+  background: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-8/htmlcss1-img_bicycles.jpeg") no-repeat center bottom;
+
+/*
+    To modify a background image's size, you can use the 'background-size' property.
+    Common values of the background-size property:
+        cover - expands the image as large as possible to cover the full width or height of a container.
+            If the dimensions of the container (say, a div) are larger than the dimensions of the image,
+            the image will become distorted. This value is best for images that don't communicate important
+            content to the user, like background images.
+        contain - expands the image as large as possible, but the image will be letterboxed, which means
+            it won't cover the full width or height of a container.
+*/
+  background-size: cover;
+
+/*
+    With the 'background-attachment' property, you can specify whether or not a background image should
+    remain at one position on the web page or whether it should move up and down as the user scrolls
+    through a web page.
+    The background-attachment property can take one of two values:
+        scroll - this value allows the image to move up and down as a
+            user scrolls on the web page (this is the default value).
+        fixed - this value pins the image's position on the page.
+*/
+  background-attachment: fixed;
+}
+
+.navigation {
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 10000;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  color: #14213D;
+  display: inline-block;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 16px 20px;
+  text-transform: uppercase;
+}
+
+#logo {
+  color: #FCA311;
+  font-family: 'Amatic SC', cursive;
+  font-size: 32px;
+  padding: 0px 50px;
+}
+
+.cover-content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: 280px;
+  width: 70%;
+}
+
+h1 {
+  color: #FFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 72px;
+  line-height: 60px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+  text-align: center;
+}
+
+h3 {
+  color: #14213D;
+  font-family: 'Abel', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: #FCA311;
+  font-family: 'Abel', sans-serif;
+  font-size: 24px;
+  margin: 0px 0px 50px 0px;
+}
+
+p {
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #14213D;
+  color: #FFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+  padding: 14px;
+
+/*
+    The 'background-image' property also lets you use color gradients in your web page.
+        -webkit-linear-gradient() - this value accepts two arguments: the two colors the
+            linear gradient will transition to and from. The colors are usually specified
+            as hex color codes.
+*/
+  background-image: -webkit-linear-gradient(#FFD194, #BC1324);
+}
+
+.products {
+  background: #EEEFF1;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  margin: 0px 2% 80px 2%;
+  text-align: center;
+  width: 45%;
+}
+
+.product img {
+/*
+    As with any other element, the dimensions of an image can be set with
+    the 'height' and 'width' properties.
+*/
+  width: 100%;
+
+/*
+    Images can also be centered, but first, their default behavior must be changed.
+    By default, images are inline elements. For images to center properly,
+    they must behave as block-level elements.
+    Note: To align images to the left or right side of a page,
+    you can use the 'float' property.
+*/
+  /*width: 300px;
+  height: 200px;*/
+  /*display: block;*/ /* Setting the box behavior as a block element */
+  /*margin: 0px auto;*/ /* Setting auto margin for left-right directions */
+  /*float: right;*/ /* Floating image to right side of the content box */
+  /*visibility: hidden;*/ /* Just for test purposes */
+}
+
+.blue {
+  color: #14213D !important;
+}

@@ -1,0 +1,167 @@
+/* All style attributes within the html&css page are
+ applied inside boxes containing the specified elements.
+  We can reveal all boxes borders by the following CSS rule: */
+* {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+  background-repeat: repeat;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navigation {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: auto;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+
+    /* We can change the default box size by setting 'width' and 'height' properties.
+    We can use the following units to specify the size:
+    px - pixels, the direct size of element in pixels (do not recommended for use,
+        since web pages are opened by the huge numeration of devices with different
+        screen sizes);
+    ems - size relative to font size of 'm' letter;
+    % - percents of size of the parent cascading box;
+    */
+  width: 100%;
+
+    /* 'min-width', 'max-width', 'min-height', 'max-height' properties can be
+        used to change constraints of boxes: */
+  min-width: 500px;
+}
+
+.navigation ul {
+  padding: 0;
+}
+
+.navigation li {
+  color: #666666;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+/** Right side styling **/
+
+.content-box {
+  background: rgba(255, 255, 255, 0.9);
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 220px;
+  width: 80%;
+
+  /* 'overflow' property can be used to define the behavior of browser, when the
+    element inside the box is spilling out.
+    Types of overflow:
+        hidden - when set to this value, any content that overflows be hidden from view;
+        scroll - when set to this value, a scrollbar will be added to the element's
+            box so that the rest of the content can be viewed by scrolling; */
+  overflow: scroll;
+}
+
+.content-header {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: -50px;
+
+  height: 320px;
+}
+
+.content-body {
+  margin: 0 auto;
+  width: 90%;
+}
+
+h1 {
+  background: #05A8AA;
+  color: #FFF;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  text-transform: uppercase;
+  top: 130px;
+  width: 70%;
+}
+
+h2 {
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 34px;
+
+  min-width: 200px;
+  max-width: 800px;
+
+  min-height: 200px;
+  max-height: 300px;
+}
+
+.content-box ul {
+  padding: 40px 0px;
+}
+
+.content-box li {
+  background-color: #05A8AA;
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 3px;
+  padding: 20px 40px;
+  width: 200px;
+}
+
+.btn {
+  color: #05A8AA;
+  border: 1px solid #05A8AA;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0px;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #05A8AA;
+  border: 1px solid #05A8AA;
+  color: #FFF;
+}

@@ -1,0 +1,141 @@
+body {
+  /* Old browsers */
+  background: #141E30;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, #35577D, #141E30);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 32px;
+  padding-top: 100px;
+  text-align: left;
+  width: 60%;
+  /* We specify the typeface of the font used for current css
+  selection by the 'font-family' property */
+  font-family: "Georgia";
+
+  /* We can specify fallback fonts in order to tell browser
+  which fant to use if it has not the most desired font
+  installed (Georgia > Garamond > serif)*/
+  font-family: "Georgia", "Garamond", serif;
+
+  font-family: "Playfair Display", serif;
+
+  /* Text transformation property transforms all selected
+  	text into uppercase or lowercase letters: */
+  text-transform: uppercase;
+
+  /* We can align text to: right, center or left */
+  text-align: left;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 30px;
+  text-align: left;
+  width: 70%;
+  /*font-family: "Georgia";*/
+
+  /*font-family: "Georgia", "Garamond", serif;*/
+
+  /* We define to use font from Google Fonts and
+  make the sans-serif font family be used as a
+  fallback font (see html file to see declaration
+  of Roboto font)*/
+  font-family: "Roboto", sans-serif;
+
+  /* We specify the spacing between words in
+  	h2 header elements of HTML. Like the line
+  	height its preferred to use ems to set this
+  	property */
+  word-spacing: 0.05em;
+
+  /* We can also specify the spacing of letters inside words
+  	(which would be useful for uppercase text, for example) */
+  letter-spacing: 0.02em;
+
+  /* Font style can be italic or normal */
+  font-style: italic;
+}
+
+p {
+  color: AliceBlue;
+  text-align: left;
+  width: 100%;
+  /* All font typefaces are split into 2 categories:
+  serif: fonts with curve endings of each letter (ex. Times new roman)
+  sans-serif: fonts with straight, modern endings (ex. Arial)*/
+  font-family: "Helvetica", "Arial", sans-serif;
+
+  /* We specify font size for the paragraph tags by 20 pixels.
+  	We can also use the following units:
+  		em - the size relative to 'm' letter
+  		%  - the size relative to 16px font*/
+  font-size: 20px;
+
+  /* We set the line height property to increase line spacing
+  	between lines of the paragraph. Note that we use ems to
+  	define line height since it would set the line spacing
+  	relative to font size (which is preferred)*/
+  line-height: 1.7em;
+
+  /* We can specify font weight property by words thin, normal, bold: */
+  font-weight: bold;
+  /* Or we can set font weight by numbers:
+  	100 (thin), 200, 300, 400 (normal weight),
+  	500, 600, 700, 800, or 900 (bold)*/
+  font-weight: 700;
+}
+
+.byline {
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.65);
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 14px;
+  margin-left: 20px;
+  padding: 10px;
+  position: relative;
+  top: 80%;
+  width: 60%;
+}
+
+.content {
+  padding: 40px;
+}
+
+.image {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-4/htmlcss1-img_soccer.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.writer-img {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  float: left;
+  width: 50px;
+}

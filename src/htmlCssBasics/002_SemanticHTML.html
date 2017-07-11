@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantics in html</title>
+</head>
+<body>
+
+<h1>Making semantic rules inside html</h1>
+<h2>(Read HTML comments to get explanation of the html code)</h2>
+
+
+<p>Image with 'alt' attribute:</p>
+<!-- alt attribute allows to specify hint text displayed, when
+ user hangs mouse pointer over the image/ when image cannot be loaded
+ or it can be read by automatic readers used by visually-impaired users-->
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Brown_bear.jpg" alt="A brown bear"/>
+
+<!-- Although 'b' and 'strong' tags have the same visual appearance
+  the semantic of 'strong' tag is make the automatic reader
+  change voice on reading that text-->
+<p><b>This text is marked by &ltb&gt tag</b></p>
+<p><strong>This text is marked by &ltstrong&gt tag</strong></p>
+
+<!-- The same semantic difference is right for 'i' and 'em' tags: -->
+<p><i>This text is marked by &lti&gt tag</i></p>
+<p><em>This text is marked by &ltem&gt tag</em></p>
+
+</body>
+</html>

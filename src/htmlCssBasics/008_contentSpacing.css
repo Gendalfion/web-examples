@@ -1,0 +1,236 @@
+/*
+    User agent stylesheets often have default CSS rules that set default
+    values for padding and margin.
+    This affects how the browser displays HTML elements, which can make it
+    difficult for a developer to design or style a web page.
+    Many developers choose to reset these default values so that they
+    can truly work with a clean slate:
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+    We set borders visible to make example more informative:
+*/
+* {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: #FFF;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navigation {
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 20px 0px;
+  text-transform: uppercase;
+
+/*
+    The margin refers to the space directly outside of the box.
+    You can adjust this spacing with the 'margin' property:
+*/
+  margin: 10px; /* all 4 sides of the box have 10 pixels outer spacing */
+
+/*
+    NOTE: see the 'padding' property description to view various
+    variants on defining margins vor the boxes...
+*/
+
+
+/*
+    All HTML elements can be classified as one of the following:
+    inline elements or block-level elements.
+
+    Inline elements - elements that display inline with text, without
+    disrupting the flow of the text (like links).
+    Block-level elements - elements that use an entire line of space in a
+    web page and disrupt the natural flow of text.
+    Most of the common HTML elements are block-level elements (headings, paragraphs, divs, and more).
+
+    In CSS, you can change the default behavior of elements with the display property.
+    The display property can take on one of four values:
+        inline - causes block-level elements (like a div) to behave
+            like an inline element (like a link).
+        block - causes inline elements (like a link) to behave
+            like a block element (like a div).
+        inline-block - causes block-level elements to behave like an inline element,
+            but retain the features of a block-level element.
+        none - removes an element from view. The rest of the web page will act as
+            if the element does not exist.
+*/
+  display: inline-block;
+}
+
+/*
+    Elements can be hidden from view with the visibility property.
+    The visibility property can be set to one of the following values:
+        hidden - hides an element.
+        visible - displays an element.
+
+    Note: An element with 'display: none' will be completely removed from the web page.
+    An element with visibility: hidden, however, will not be visible on the web page,
+    but the space reserved for it will.
+*/
+.opened {
+  visibility: hidden;
+}
+
+.logo {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  padding: 5px 50px;
+}
+
+.banner {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
+  background-size: cover;
+  background-position: bottom center;
+  height: 700px;
+  width: 100%;
+}
+
+#banner-content {
+  border: 1px solid #FFF;
+  position: relative;
+  top: 20%;
+
+/*
+    When the 'margin' property is set to auto, the element being styled will center
+    in the parent box. But in order to center an element, a width must be set for that element.
+    Otherwise, the width of the div will be automatically set to the full width of its
+    containing element.
+*/
+  width: 60%;
+  margin: auto;
+
+/*
+    The space between the contents of a box and the borders of a box is known as padding.
+    In CSS, you can modify this space with the 'padding' property.
+    Note: When padding is set for a box it will be added to the width and height of a box,
+    increasing the dimensions of the box.
+*/
+  padding: 50px;
+
+/*
+    Another version of the padding property lets you specify exactly how much
+    padding there should be on each side of the content (clockwise order).
+    Note: When this version of the padding property is used,
+    a padding value must be specified for all four sides of the content.
+*/
+padding: 50px 10px 50px 10px;
+
+/*
+    When you're certain that the top and bottom values for padding will equal
+    each other, and that the left and right values for padding will also equal
+    each other, you can use the following shortcut:
+*/
+padding: 50px 10px;
+
+}
+
+.byline {
+  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  color: #333;
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+
+  /*
+      if you want to be even more specific about the amount of padding on each side of
+      a box's content, you can use the following properties:
+          padding-top
+          padding-right
+          padding-bottom
+          padding-left
+  */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+}
+
+h2 {
+  border: 1px solid #D7263D;
+  color: #D7263D;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 40px 12%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #D7263D;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 20px 10%;
+  text-transform: uppercase;
+}
+
+p {
+  color: #333;
+  font-size: 16px;
+  line-height: 48px;
+  margin-top: 60px;
+}
+
+.pull-quote {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  width: 70%;
+}
+
+.share {
+  border: 1px solid #DDD;
+  padding: 40px 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.share a {
+  background: #D7263D;
+  border: 1px solid #D7263D;
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.share a:hover {
+  background: #FFF;
+  border: 1px solid #D7263D;
+  color: #D7263D;
+  animation: ease;
+}

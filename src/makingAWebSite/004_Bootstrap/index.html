@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skillfair</title>
+  <meta charset="utf-8"/>
+  <!--
+  One of the reasons Bootstrap and frameworks like it are so popular is because they offer grids.
+  A grid makes it possible to organize HTML elements using preconfigured columns. Using a grid,
+  you can customize responsive page layouts quickly and reliably.
+
+  Bootstrap's grid columns are represented by 12 vertical bars. The boxes represent HTML elements.
+  The words "container", "jumbotron", "col-sm-6" and "col-sm-3" refer to Bootstrap classes.
+  The element with class "jumbotron" spans the entire width of the webpage, beyond the borders of the grid.
+  Elements inside the second "container", such as "col-sm-6" and "col-sm-3" are contained within the grid columns.
+  Elements labeled "col-sm-3" take up three grid columns; elements labeled "col-sm-6" take up six grid columns.
+
+  Before Bootstrap can work for us, we need to link to it:
+  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+<header class="container">
+  <!--
+  Creating a div with the Bootstrap class row:
+  -->
+  <div class="row">
+    <!--
+    Creating an h1 with Bootstrap's class 'col-sm-4':
+    -->
+    <h1 class="col-sm-4">Skillfair</h1>
+    <!--
+     The second part consists of the nav element with class col-sm-8.
+     It will take up the remaining eight grid columns. 'text-right' indicates that text
+     will be arranged on the right side of the nav
+    -->
+    <nav class="col-sm-8 text-right">
+      <p>newest</p>
+      <p>catalogue</p>
+      <p>contact</p>
+    </nav>
+  </div>
+</header>
+<!--
+In addition to a header/navigation, many websites have a large showcase area
+featuring important content. Bootstrap refers to this as a jumbotron. Below is an
+example implementation of a jumbotron:
+-->
+<section class="jumbotron">
+  <div class="container">
+    <!--
+    A div with the Bootstrap class row text-center can center subsequent child
+    elements which will contain text:
+    -->
+    <div class="row text-center">
+      <h2>Homemade Goods</h2>
+      <h3>This Year's Best</h3>
+      <!--
+      The anchor element will have Bootstrap's btn btn-primary class, which will transform it into a button:
+      -->
+      <a class="btn btn-primary" href="#">See all</a>
+    </div>
+  </div>
+</section>
+
+<!--
+Supporting content can be arranged using Bootstrap's grid.
+Below is an example implementation of a supporting content area:
+-->
+<section class="container">
+  <div class="row">
+    <!--
+    Below, row is divided into two equal parts. Each part takes up 6 of bootstrap's 12 columns.
+    Using the col-sm-6 class ensures that this layout will appear when the user's screen is the width
+    of a tablet device(768 pixels). On narrower screens, such as an iPhone, only one image per row will appear.
+    -->
+    <div class="col-sm-6">
+      <p>kitchen</p>
+      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/kitchen.jpg">
+    </div>
+    <div class="col-sm-6">
+      <p>woodwork</p>
+      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/woodwork.jpg">
+    </div>
+    <div class="col-sm-6">
+      <p>gifts</p>
+      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/gifts.jpg">
+    </div>
+    <div class="col-sm-6">
+      <p>antiques</p>
+      <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/antique.jpg">
+    </div>
+  </div>
+  <div class="row text-center">
+    <a class="btn btn-secondary" href="#">View Complete Catalogue</a>
+  </div>
+</section>
+
+<!--
+Footers display copyright information, social media links and sometimes site navigation.
+Below is one possible implementation for a footer section using Bootstrap:
+-->
+<footer class="container">
+  <div class="row">
+    <p class="col-sm-4">&copy; 2016 Skillfair</p>
+    <ul class="col-sm-8">
+      <li class="col-sm-1">
+        <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+      </li>
+      <li class="col-sm-1">
+        <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
+      </li>
+      <li class="col-sm-1">
+        <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+      </li>
+      <li class="col-sm-1">
+        <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+      </li>
+    </ul>
+  </div>
+</footer>
+</body>
+
+</html>

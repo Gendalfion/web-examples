@@ -1,0 +1,146 @@
+* {
+    /*border: 1px solid Black;*/
+}
+
+html, body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-3/background.jpg');
+  background-position: center top;
+  background-size: cover;
+  margin: 0;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 100;
+}
+
+.page-description {
+  border: 1px solid #000;
+  text-align: center;
+  /*
+  The CSS padding property controls the empty space between the page element's content and its border.
+  Increasing a page element's padding makes the space around the content more spacious, while decreasing
+  it makes the space more compact.
+  */
+  padding: 30px;
+}
+
+.gallery {
+
+  /*
+  'flex' can be used to easily align multiple page elements horizontally.
+  To make children of the div align horizontally on the webpage, in CSS we can use:
+  */
+  display: flex;
+
+  /*
+  We can make sure no child element moves off the page by using 'flex-wrap: wrap':
+  */
+  flex-wrap: wrap;
+
+  /*
+  To center rows of children elements, we can use 'justify-content: center':
+  */
+  justify-content: center;
+
+  /*
+  The margin property creates space on all sides of a page element.
+  It's also possible to set separate margin spacings on each side of an element.
+
+  Additional margin properties:
+      margin-top: Sets the top margin.
+      margin-bottom: Sets the bottom margin.
+      margin-left: Sets the left margin.
+      margin-right: Sets the right margin.
+  */
+  margin-top: 20px;
+}
+
+.gallery-item {
+  /*
+  The CSS margin property controls the space between different HTML elements on a webpage.
+  Use margin to bring page elements closer together or to move them further apart.
+  */
+  margin: 20px;
+
+  /*
+  The border property can be used to visually define a page element's outer edge.
+
+  In CSS, the border property's value requires three parts:
+      thickness: Sets the thickness of the border, using pixels, ems, or rems.
+      type: Sets the border type. Common options are solid, dotted, and dashed. There are many others.
+      color: sets the border's color, using named colors, HEX, or RGB values.
+  */
+  border: 5px solid #FFF;
+}
+
+.gallery-item .thumbnail {
+
+}
+
+/* FOOTER NAVIGATION */
+
+nav {
+  background-color: #FFF;
+}
+
+nav li {
+  margin: 0;
+  padding: 0 10px;
+  /*
+  Display types can be overwritten in CSS by using the display property.
+  For example, we can make list items appear on the same line by setting display to inline:
+  */
+  display: inline;
+}
+
+nav ul {
+  display: inline;
+}
+
+.contact-btn {
+  /*
+  By using float, we have the option of floating elements left or right:
+  */
+  float: right;
+}
+
+.contact-btn a {
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 8px 18px;
+  border: 1px solid #204156;
+}
+
+/*
+'active' is a psuedo-class selector, which we use to style an element only while it's being clicked:
+*/
+.contact-btn a:active {
+  /*
+  The CSS position property enables you to position HTML elements in exact locations on a webpage.
+  One useful value for this property is relative. This value positions page elements on a webpage
+  relative to where they would normally appear.
+  */
+  position: relative;
+  /*
+  By first setting 'position: relative', you can then use the CSS properties top, left, bottom, and right
+  to shift an element away from where it would have normally appeared on the page:
+  */
+  top: 2px;
+}
+
+nav a {
+  height: 60px;
+  line-height: 60px;
+  color: #204156;
+  text-decoration: none;
+}

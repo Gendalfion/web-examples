@@ -1,0 +1,42 @@
+h2 {
+    font-family: arial, serif;
+}
+
+form {
+    display: inline-block;
+}
+
+#button{
+    display: inline-block;
+    height:20px;
+    width:70px;
+    background-color:#cc0000;
+    font-family: arial, serif;
+    font-weight:bold;
+    color:#ffffff;
+    border-radius: 5px;
+    text-align:center;
+    margin-top:2px;
+    cursor: pointer;
+}
+
+.list {
+    margin: 30px auto;
+    font-family: garamond, serif;
+    color:#cc0000;
+    width:50%;
+    text-align: left;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+.item:hover {
+    color:#00cc00;
+    cursor:pointer;
+}
+
+.item:hover:after {
+    content: " (check and delete task)";
+}

@@ -1,0 +1,192 @@
+/* Universal Styles */
+
+html {
+/*
+    To set a different font size for the root element, you can add a CSS rule.
+*/
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+}
+
+.image-container {
+/*
+    Setting overflow to hidden ensures that any content with dimensions larger than
+    the container will be hidden from view.
+*/
+  overflow: hidden;
+}
+
+.image-container img {
+  /*
+    'max-width' property ensures that images scale with the width of the container.
+  */
+  max-width: 100%;
+
+  /*
+    The 'height' property is set to auto, meaning an image's height will automatically
+    scale proportionally with the width.
+  */
+  height: auto;
+
+  /*
+    Finally, display images as block level elements (rather than inline-block, their default state).
+    This will prevent images from attempting to align with other content on the page (like text),
+    which can add unintended margin to the images.
+  */
+  display: block;
+}
+
+/* Banner Section */
+
+#banner {
+/*
+    Note: When using relative sizing, ems and rems should be used to size text and
+    dimensions on the page related to text size (i.e. padding around text). This
+    creates a consistent layout based on text size. Otherwise, percentages should be used.
+*/
+  height: 46rem;
+  background-image: url('img/camel-background.png');
+/*
+    Background images of HTML elements can also be scaled responsively using CSS properties.
+*/
+  background-position: center; /* Center the image inside container */
+  background-repeat: no-repeat; /* Do not repeat the image (by default image is repeated) */
+/*
+    With property 'background-size: cover' the image will cover the entire background of the element,
+    all while keeping the image in proportion. If the dimensions of the image exceed the dimensions
+    of the container then only a portion of the image will display.
+*/
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#banner h1 {
+/*
+    Incorporating relative sizing starts by using units other than pixels.
+    One unit of measurement you can use in CSS to create relatively-sized content
+    is the em, written as em in CSS.
+    Historically, the em represented the width of a capital letter M in the typeface
+    and size being used. That is no longer the case.
+    Today, the em represents the size of the base font being used. For example,
+    if the base font of a browser is 16 pixels (which is normally the default size of
+    text in a browser), then 1 em is equal to 16 pixels. 2 ems would equal 32 pixels, and so on.
+
+    Rem stands for root em. It acts similar to em, but instead of checking parent
+    elements to size font, it checks the root element. The root element is the <html> tag.
+    Most browsers set the font size of <html> to 16 pixels,
+    so by default rem measurements will be compared to that value.
+
+    One advantage of using rems is that all elements are compared to the same font size value,
+    making it easy to predict how large or small font will appear. If you are interested in sizing
+    elements consistently across an entire website, the rem measurement is the best unit for the job.
+    If you're interested in sizing elements in comparison to other elements nearby, then the em unit
+    would be better suited for the job.
+*/
+  font-size: 3.75rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+/* Blog Post */
+
+#blog {
+/*
+    To size non-text HTML elements relative to their parent elements on the page you can use percentages.
+    Percentages are often used to size box-model values, like width and height, padding, border, and margins.
+    They can also be used to set positioning properties (top, bottom, left, right).
+*/
+  width: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blog .post {
+  width: 52%;
+/*
+    Note: When percentages are used to set padding and margin, they are calculated based
+    only on the width of the parent element.
+*/
+  margin-top: 12.5%;
+  margin-bottom: 7.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  color: #444444;
+}
+
+p {
+/*
+    When a browser window is narrowed or widened, text can become either very compressed or
+    very spread out, making it difficult to read.
+    Properties 'min-width' and 'max-width' ensure that content is legible by limiting
+    the minimum and maximum widths.
+
+    You can also limit the minimum and maximum height of an element:
+        min-height — ensures a minimum height for an element's box;
+        max-height — ensures a maximum height for an element's box.
+*/
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.post h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  color: #999999;
+}
+
+.post .opening-line {
+  margin-top: 4.1875rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.post p,
+.post .image-container {
+  margin-bottom: 2rem;
+}
+
+.post .image-container {
+  width: 100%;
+}
+
+/* Blog Images */
+
+.images {
+  margin-bottom: 20%;
+}
+
+.images .image-container {
+  display: inline-block;
+  width: 50%;
+}
+
+/* Footer */
+
+footer {
+  padding: 4rem 0;
+  border-top: 1px solid #999999;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #999999;
+  text-align: center;
+}
